@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <meta name="color:background" content="#fbfbfb" />
+    <meta name="color:text" content="#797979" />
+    <meta name="color:accent1" content="#2374ff" />
+    <meta name="color:accent2" content="#23c4ff" />
+    <meta name="color:blockquote" content="#dadada" />
+    <meta name="color:post background" content="#ffffff" />
+    <meta name="color:border" content="#dfdfdf" />
+    <meta name="color:link" content="#2374ff" />
+    <meta name="color:titleLinkOnHover" content="#000000" />
+    <meta name="color:titlebg" content="#ededed" />
+    <meta name="color:titleborder" content="#dfdfdf" />
+    <meta name="color:sidebarLink" content="#ffffff" />
+    <meta name="image:sidebar" content="" />
+    <meta name="image:sidebar avatar" content="">
+    <meta name="text:go to the website below to search icons, use the icon titles to replace the ones for your links:" content="http://fontawesome.io/icons/"
+    />
+    <meta name="text:about link" content="/about" />
+    <meta name="text:link 1 URL" content="/" />
+    <meta name="text:link 1 icon" content="tag" />
+    <meta name="text:link 1" content="link 1" />
+    <meta name="text:link 2 URL" content="/" />
+    <meta name="text:link 2 icon" content="cog" />
+    <meta name="text:link 2" content="link 2" />
+    <meta name="text:link 3 URL" content="/" />
+    <meta name="text:link 3 icon" content="book" />
+    <meta name="text:link 3" content="link 3" />
+    <meta name="text:link 4 URL" content="/" />
+    <meta name="text:link 4 icon" content="pencil" />
+    <meta name="text:link 4" content="" />
+    <meta name="text:link 5 URL" content="/" />
+    <meta name="text:link 5 icon" content="twitter" />
+    <meta name="text:link 5" content="" />
+    <meta name="text:link 6 URL" content="/" />
+    <meta name="text:link 6 icon" content="code" />
+    <meta name="text:link 6" content="" />
+    <meta name="text:max post width" content="540" />
+    <meta name="if:show about" content="1" />
+    <meta name="if:show sidebar" content="1" />
+    <meta name="if:show additional links" content="1" />
+</head>
+
+<body>
+    <style>
+        /* container for everything */
+
+        .my-container {
+            display: flex;
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden;
+            flex-direction: row;
+            flex-wrap: nowrap;
+        }
+
+        /* colored sidebar */
+
+        .sidebar {
+            width: 80px;
+            height: 100vh;
+            min-width: 80px;
+            background: yellow;
+            transition: 0.3s all;
+            opacity: 1;
+        }
+
+        .sidebar .sidebar-header strong {
+            display: block;
+        }
+
+        .sidebar ul {
+            position: relative;
+            content: none;
+        }
+
+        .sidebar ul li a {
+            text-align: left;
+            padding: 20px 10px;
+            text-align: center;
+            font-size: 0.85em;
+            text-decoration: none !important;
+        }
+
+        .sidebar ul li {
+            padding: 0;
+            font-size: 15px;
+        }
+
+        .sidebar ul li:before {
+            display: none;
+        }
+
+        .sidebar ul li a i {
+            margin-right: 0;
+            display: block;
+            font-size: 1.8em;
+            margin-bottom: 5px;
+        }
+
+        .sidebar-header {
+            width: 80px;
+            height: 80px;
+            overflow: hidden;
+            box-shadow: rgba(0, 0, 0, .1) 1px 1px 20px;
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-image:url({image:sidebar avatar}),
+            url({PortraitURL-128});
+        }
+
+        .sidebar .sidebar-header strong {
+            display: none;
+            font-size: 1.8em;
+        }
+
+        .sidebar ul.components {
+            padding: 20px 0;
+        }
+
+        .sidebar ul li a {
+            padding: 10px;
+            display: block;
+        }
+
+        .sidebar ul li a:hover,
+        a[aria-expanded="true"] {
+            color: {
+                color: accent1
+            }
+             !important;
+            text-decoration:none !important;
+            box-shadow: 8px 8px 10px rgba(68, 68, 68, 0.1);
+            background: {
+                color: sidebarLink
+            }
+            ;
+            -webkit-transition: all 0.25s;
+            -moz-transition: all 0.25s;
+            -o-transition: all 0.25s;
+            transition: all 0.25s;
+        }
+
+        .sidebar ul li a i {
+            margin-right: 10px;
+        }
+
+        .sidebar ul li>a,
+        a[aria-expanded="true"] {
+            color: {
+                color: sidebarLink
+            }
+            ;
+        }
+
+        a[data-toggle="collapse"] {
+            position: relative;
+        }
+
+        a[aria-expanded="false"]::before,
+        a[aria-expanded="true"]::before {
+            content: '\e259';
+            display: block;
+            position: absolute;
+            right: 20px;
+            font-family: 'Glyphicons Halflings';
+            font-size: 0.6em;
+        }
+
+        a[aria-expanded="true"]::before {
+            content: '\e260';
+        }
+
+        a[aria-expanded="false"]::before,
+        a[aria-expanded="true"]::before {
+            top: auto;
+            bottom: 5px;
+            right: 50%;
+            -webkit-transform: translateX(50%);
+            -ms-transform: translateX(50%);
+            transform: translateX(50%);
+        }
+
+        .sidebar {
+            margin-left: 0 !important;
+        }
+
+        .sidebar .sidebar-header strong {
+            display: block;
+        }
+
+        .sidebar ul li a {
+            padding: 20px 10px;
+        }
+
+        .sidebar ul li a i {
+            margin-right: 0;
+            display: block;
+            font-size: 1.3em;
+        }
+
+        .sidebar ul ul a {
+            padding: 10px !important;
+        }
+
+        /* sidebar with image */
+
+        .img-sidebar {
+            min-width: 375px;
+            max-width: 450px;
+            height: 100vh;
+            background: blue;
+            transition: 0.3s all;
+            opacity: 1;
+        }
+
+        .topbar-one,
+        .topbar-two {
+            height: 0px;
+            overflow: hidden;
+            transition: 0.3s all;
+        }
+
+        /* container for posts */
+
+        .posts-container {
+            width: 100%;
+            height: 100vh;
+            overflow: auto;
+            background: gray;
+        }
+
+        .post {
+            width: 80%;
+            height: 2000px;
+            background: pink;
+        }
+
+        @media screen and (max-width: 775px) {
+            .my-container {
+                flex-direction: column;
+            }
+            .sidebar,
+            .img-sidebar {
+                width: 0px;
+                height: 0px;
+                opacity: 0;
+                overflow: hidden;
+            }
+            .topbar-one,
+            .topbar-two {
+                height: 80px;
+                background: yellow;
+                width: 100vw;
+            }
+            .topbar-two {
+                background: blue;
+                height: 60px;
+            }
+        }
+    </style>
+    <div class="my-container">
+        <div class="sidebar">
+            {block:IfShowSidebar}
+
+            <a href="/">
+                <div class="sidebar-header">
+
+
+                </div>
+            </a>
+            {block:IfShowAdditionalLinks}
+            <ul class="list-unstyled components">
+                {block:IfLink1}
+                <li>
+
+                    <a href="{text:link 1 URL}">
+                        <i class="fa fa-{text:link 1 icon}"></i>&nbsp;{text:link 1}</a>
+
+                </li>
+                {/block:IfLink1} {block:IfLink2}
+                <li>
+
+                    <a href="{text:link 2 URL}">
+                        <i class="fa fa-{text:link 2 icon}"></i>{text:link 2}</a>
+
+                </li>
+                {/block:IfLink2} {block:IfLink3}
+                <li>
+
+                    <a href="{text:link 3 URL}">
+                        <i class="fa fa-{text:link 3 icon}"></i>{text:link 3}</a>
+
+                </li>
+                {/block:IfLink3} {block:IfLink4}
+                <li>
+
+                    <a href="{text:link 4 URL}">
+                        <i class="fa fa-{text:link 4 icon}"></i>{text:link 4}</a>
+
+                </li>
+                {/block:IfLink4} {block:IfLink5}
+                <li>
+
+                    <a href="{text:link 5 URL}">
+                        <i class="fa fa-{text:link 5 icon}"></i>{text:link 5}</a>
+
+                </li>
+                {/block:IfLink5} {block:IfLink6}
+                <li>
+
+                    <a href="{text:link 6 URL}">
+                        <i class="fa fa-{text:link 6 icon}"></i>{text:link 6}</a>
+
+                </li>
+                {/block:IfLink6}
+            </ul>
+            {/block:IfShowAdditionalLinks} {/block:IfShowSidebar}
+
+
+        </div>
+        <!-- <div class="topbar-one">
+
+    </div> -->
+        <div class="topbar-two">
+
+        </div>
+        <div class="img-sidebar">
+
+        </div>
+
+        <div class="posts-container">
+            <div class="post">
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
