@@ -72,7 +72,7 @@ function fadeInContent() {
       if (top_of_object <= bottom_of_window) {
         $(this).animate({ opacity: "1" }, 500);
       }
-      if (!$("body").height() > $(window).height()) {
+      if ($(".preview_iframe")[0]) {
         $(this).animate({ opacity: "1" }, 500);
       }
     });
