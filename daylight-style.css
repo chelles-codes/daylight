@@ -1150,3 +1150,9 @@ RESPONSIVENESS
 .card-columns {
     column-count: 2;
 }
+
+@media screen and (max-width:500px) {
+    .card-columns {
+        column-count: 1;
+    }
+}
