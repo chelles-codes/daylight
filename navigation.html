@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Blogroll</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,600" rel="stylesheet" />
+    <link href="daylight-style.css" rel="stylesheet" type="text/css" />
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+
+
+
+
+    <script>
+
+        //IMPORTANT: USE THE JAVASCRIPT HERE TO QUICKLY FINISH YOUR THEME SETTINGS. 
+        //
+        var title = "d a y l i g h t";
+        var description = 'you &nbsp;were &nbsp;always &nbsp;my &nbsp;' +
+            '<strong>h e r o</strong> . . .';
+        var sidebarAvatar = 'https://78.media.tumblr.com/avatar_753990235071_128.pnj'
+        var bigSidebarImage = "http://static.tumblr.com/8c22a80d7689ec1729aea3dbf38dbf70/xpoxdgn/yWmpc7bcr/tumblr_static_7l72oepekc4csk0w80gckw840.gif";
+        var aboutLink = "/about";
+        var navLink = "/";
+        //these are optional icon links, toggle using true/false
+        var iconLinks = {
+            about: true,
+            archive: true,
+            navLink: false
+        };
+        //use this to fill out your additional link information, these will appear in the gradient sidebar/topbar
+        var additionalLinks = [
+            {
+                name: "link 1",
+                link: "/",
+                icon: "tag"
+            },
+            {
+                name: "link 2",
+                link: "/",
+                icon: "cog"
+            },
+            {
+                name: "link 3",
+                link: "/",
+                icon: "book"
+            },
+            {
+                name: "link 4",
+                link: "/",
+                icon: "pencil"
+            },
+            {
+                name: "link 5",
+                link: "/",
+                icon: "twitter"
+            },
+            {
+                name: "link 6",
+                link: "/",
+                icon: "tag"
+            }
+        ]
+        //IMPORTANT: FILL OUT TAG INFO HERE
+        var tags = [
+            {
+                fandom: "Fandom 1",
+                image: "icon.png",
+                tags: [
+                    {
+                        name: "Tag 1",
+                        url: "/tagged/"
+                    },
+                    {
+                        name: "Tag 2",
+                        url: "/tagged/"
+                    }, {
+                        name: "Tag 3",
+                        url: "/tagged/"
+                    },
+                    {
+                        name: "Tag 4",
+                        url: "/tagged/"
+                    },
+                ]
+            },
+            {
+                fandom: "Fandom 2",
+                image: "icon.png",
+                tags: [
+                    {
+                        name: "Tag 1",
+                        url: "/tagged/"
+                    },
+                    {
+                        name: "Tag 2",
+                        url: "/tagged/"
+                    }, {
+                        name: "Tag 3",
+                        url: "/tagged/"
+                    },
+                    {
+                        name: "Tag 4",
+                        url: "/tagged/"
+                    },
+                ]
+            },
+            {
+                fandom: "Fandom 3",
+                image: "icon.png",
+                tags: [
+                    {
+                        name: "Tag 1",
+                        url: "/tagged/"
+                    },
+                    {
+                        name: "Tag 2",
+                        url: "/tagged/"
+                    }, {
+                        name: "Tag 3",
+                        url: "/tagged/"
+                    },
+                    {
+                        name: "Tag 4",
+                        url: "/tagged/"
+                    },
+                ]
+            },
+            {
+                fandom: "Fandom 4",
+                image: "icon.png",
+                tags: [
+                    {
+                        name: "Tag 1",
+                        url: "/tagged/"
+                    },
+                    {
+                        name: "Tag 2",
+                        url: "/tagged/"
+                    }, {
+                        name: "Tag 3",
+                        url: "/tagged/"
+                    },
+                    {
+                        name: "Tag 4",
+                        url: "/tagged/"
+                    },
+                ]
+            },
+            
+
+
+        ]
+    </script>
+
+</head>
+
+
+<body>
+    <style>
+        /* IMPORTANT: In order to customize this theme to your liking, you will need
+                to change the colors in the css below. I am limiting the ability to change
+                font and layout so that the theme doesn't get messed up unintentionally. 
+            
+                You'll notice that I repeat colors in the css. This is my color scheme for 
+                the theme, which is limited to only a few colors. 
+            
+                Theme background: #fbfbfb,
+                Content background: #ffffff,
+                Text color: #474747,
+                Accent 1: #46a6ff,  <--- the end of the gradient
+                Accent 2: #23c4ff,  <--- the other end of the gradient
+                Inverse Color: #ffffff,  <-- to go on top of the accent colors
+                Border: #f5f3f3,
+                Title background: #ededed,
+                Title border: #e5e5e5
+            
+                To speed up the process of editing this theme, use Control + F or Command + F 
+                to find elements that share the same color, and replace that color with your 
+                desired hex code. This will ensure consistency and cohesiveness
+                throughout your theme. Or go crazy with colors. It's up to you. 
+            
+                I've left lots of instructions for you, have fun! */
+
+        /* CHANGE THIS COLOR TO CHANGE THEME BACKGROUND */
+
+        body,
+        .sidebar-container,
+        .img-sidebar-container,
+        .posts-container {
+            background: #fbfbfb;
+        }
+
+
+        /* CHANGE THIS COLOR TO CHANGE GENERAL TEXT COLOR */
+
+        body,
+        ul:not(.navbar-nav) li,
+        .mainlinks a,
+        .topbar .navbar .nav-link,
+        .topbar .navbar .nav-item,
+        .topbar .navbar .navbar-menu a {
+            color: #474747;
+        }
+
+
+        /* CHANGE THIS COLOR TO CHANGE THE TEXT COLOR OF ALL TEXTUAL/ICON LINK */
+
+        a,
+        ul:not(.navbar-nav) li:hover:before,
+        .sidebar ul li a:hover,
+        .topbar .navbar .nav-link:hover,
+        .topbar .navbar .navbar-menu a:hover,
+        .tag-item:before {
+            color: #46a6ff;
+        }
+
+        /* CHANGE THIS COLOR TO CHANGE LINK HOVER EFFECTS */
+
+        a:hover,
+        .tag-item:hover:before {
+            /*link hover color*/
+            color: #23c4ff;
+        }
+
+        /* CHANGE THESE COLORS TO CHANGE ALL VERTICAL GRADIENTS */
+
+        .sidebar,
+        ::-webkit-scrollbar {
+            /* sidebar gradient 
+                    YOU MUST CHANGE ALL OF THESE COLORS TO THE DESIRED COLORS
+                    FOR CROSS-BROWSER SUPPORT
+                    Only change the COLORS, which are a hex code formatted as 
+                    #******
+                    For example, white is the code #ffffff
+                    */
+            background: #2374ff;
+            /* delete these if you dont want a gradient */
+            background: -moz-linear-gradient(top, #2374ff 0%, #23c4ff 100%);
+            background: -webkit-linear-gradient(top, #2374ff 0%, #23c4ff 100%);
+            background: linear-gradient(to bottom, #2374ff 0%, #23c4ff 100%);
+        }
+
+
+        /* CHANGE THIS COLOR TO CHANGE THE COLOR OF ALL TEXT OVERLAYED ON GRADIENTS/FILL */
+
+        .sidebar ul li a,
+        .topbar .navbar .navbar-toggler {
+            /*sidebar link color */
+            color: #ffffff;
+        }
+
+
+
+        /* CHANGE THIS COLOR TO CHANGE THE FILL OF CONTENT, SUCH AS THE IMAGE SIDEBAR AND TAG CARDS */
+
+        .titleSidebar,
+        .blogtitle,
+        .sidebar ul li a:hover,
+        .topbar .navbar .navbar-menu,
+        .topbar .navbar .nav-link,
+        .topbar .navbar .nav-item,
+        .card {
+            /* Background fill color of the sidebar with the larger image */
+            background: #ffffff;
+        }
+
+
+
+        /* CHANGE THIS COLOR TO CHANGE TO CHANGE THE ICON LINKS FILL/TEXT COLOR */
+
+        .mainlinks a:hover,
+        .topbar .navbar .nav-link i {
+            /* Color of the link icons on hover*/
+            background: #2374ff;
+            color: #ffffff;
+
+        }
+
+        /* CHANGE THIS COLOR TO CHANGE THE BORDER COLORS */
+
+        .mainlinks,
+        .topbar .navbar .nav-item,
+        #search {
+            /* Color of the border above the link icons */
+            border-color: #f5f3f3;
+        }
+
+
+        .mainlinks,
+        .topbar .navbar .nav-item {
+            border-top-width: 1px;
+        }
+
+        /* CHANGE THIS COLOR TO CHANGE THE FILL/BORDER ON TITLE CONTAINERS */
+
+        ::-webkit-scrollbar-thumb,
+        .card-header {
+            background: #ededed;
+            border: 1px solid #e5e5e5;
+        }
+
+
+
+        /* CHANGE THESE COLORS TO CHANGE THE HORIZONTAL GRADIENT ON THE RESPONSIVE TOPBAR
+                which appears only a small screen sizes */
+
+        .topbar .navbar {
+            background: #2374ff;
+            /* delete if you don't want gradient*/
+            background: -moz-linear-gradient(right, #2374ff 0%, #23c4ff 100%);
+            background: -webkit-linear-gradient(right, #2374ff 0%, #23c4ff 100%);
+            background: linear-gradient(to right, #2374ff 0%, #23c4ff 100%);
+        }
+
+        /* TOOLTIP COLORS */
+
+        .tooltip-inner {
+            background-color: #474747 !important;
+            color: #fff;
+            line-height: 15px;
+        }
+    </style>
+
+    <div class="my-container">
+        <div class="sidebar">
+            <a href="/">
+                <div class="sidebar-header"></div>
+            </a>
+            <ul class="list-unstyled components">
+
+            </ul>
+        </div>
+
+        <div class="topbar">
+            <div class="p-0 navbar navbar-expand-lg navbar-inverse">
+                <a href="/" class="navbar-brand p-0">
+                    <div class="sidebar-header"></div>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link title-text" href="/"></a>
+                        </li>
+                        <li class="nav-item">
+                            <div class="navbar-menu">
+                                <a title="home" class="home" style="font-size:17px;" href="/">
+                                    <i class="fa fa-home"></i>
+                                </a>&nbsp;
+                                <a title="ask" href="/ask">
+                                    <i class="fa fa-envelope"></i>
+                                </a>&nbsp;
+                                <a title="about" class="about" href="/about">
+                                    <i class="fa fa-user"></i>
+                                </a>&nbsp;
+                                <a title="archive" class="archive" href="/archive">
+                                    <i class="fa fa-archive"></i>
+                                </a>&nbsp;
+                                <a title="Links" class="navlink" href="">
+                                    <i class="fa fa-bars"></i>
+                                </a>&nbsp;
+
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="img-sidebar">
+            <div class="titleSidebar">
+                <div class="titleSidebar img">
+                    <img src="http://static.tumblr.com/8c22a80d7689ec1729aea3dbf38dbf70/xpoxdgn/yWmpc7bcr/tumblr_static_7l72oepekc4csk0w80gckw840.gif">
+                </div>
+                <div class="blogtitle title-text"></div>
+                <div class="description"></div>
+                <div class="mainlinks">
+                    <a title="home" class="home" style="font-size:17px;" href="/">
+                        <i class="fa fa-home"></i>
+                    </a>&nbsp;
+                    <a title="ask" href="/ask">
+                        <i class="fa fa-envelope"></i>
+                    </a>&nbsp;
+                    <a title="about" class="about" href="/about">
+                        <i class="fa fa-user"></i>
+                    </a>&nbsp;
+
+                    <a title="archive" class="archive" href="/archive">
+                        <i class="fa fa-archive"></i>
+                    </a>&nbsp;
+
+
+                    <a title="Links" class="navlink" href="">
+                        <i class="fa fa-bars"></i>
+                    </a>&nbsp;
+
+                </div>
+            </div>
+        </div>
+
+        <div class="posts-container">
+            <div class="content">
+                <div class="card page-title">
+                    <div class="card-header">
+                        tags
+                    </div>
+                </div>
+                <div class="card search-card">
+                    <input type="text" class="form-control" id="search" onkeyup="searchFunction()" placeholder="Search for tags...">
+                </div>
+                <div class="card-columns" id="tag-collection">
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <div id="credit">
+        <a title="theme by #userchelle" href="https://loislane.tumblr.com" class="">
+            <img src="https://68.media.tumblr.com/62496251ce73eb90b955cdfa12c0ac83/tumblr_op9av3V2XR1tbtydxo2_r1_75sq.png">
+        </a>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="daylight-script.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('[title]').tooltip()
+            var info = {
+                title: title,
+                description: description,
+                sidebarAvatar: sidebarAvatar,
+                bigSidebarImage: bigSidebarImage,
+                aboutLink: aboutLink,
+                navLink: navLink,
+                iconLinks: iconLinks,
+                additionalLinks: additionalLinks,
+                tags: tags
+            } 
+            finishTheme(info);
+            fadeInContent();
+        });
+
+
+    </script>
+</body>
+
+
+
+
+</html>
